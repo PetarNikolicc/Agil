@@ -1,8 +1,44 @@
-* {
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+    height: 100%;
   }
-  
+  .hero {
+    background-image: url('images/ingredients.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+  }
+  /*.container {
+    height: 80vh;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  */
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .feature {
+    width: 30%;
+    background: grey;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .details {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
