@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/stylesidebar.css">
-    <link rel="stylesheet" href="/cardstyle.css">
-    <link rel="stylesheet" href="/footerstyle.css">
-    <link rel="stylesheet" href="/karusell.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylesidebar.css">
+    <link rel="stylesheet" href="cardstyle.css">
+    <link rel="stylesheet" href="footerstyle.css">
+    <link rel="stylesheet" href="karusell.css">
 </head>
 <body>
     <div class="menu-tab" onclick="openNav()" aria-label="Open sidebar">☰</div>
@@ -29,8 +29,8 @@
 
     <div class="card-container">
         <div class="card">
-            <h2>Tips</h2>
-            <input type="text" placeholder="Sök på tips..." id="search-tips">
+            <h2>Tid</h2>
+            <input type="text" placeholder="Sök på tiden..." id="search-tid">
         </div>
         <div class="card">
             <h2>Ingredienser</h2>
@@ -43,9 +43,9 @@
     </div>
 	
     <div class="carousel">
-        <img src="https://via.placeholder.com/600x400?text=Image+1" class="active" alt="Image 1">
-        <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
-        <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
+        <img src="images/kycklingpasta-med-soltorkade-tomater_1580.avif" class="active" alt="Image 1">
+        <img src="images/Grillad-flankstek-med-chimichurrisas.png" alt="Image 2">
+        <img src="images/Aloo-gobi-foto-Nurlan-Emir-Mathem-800x800.jpg" alt="Image 3">
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
@@ -150,7 +150,7 @@
     <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel img');
-    const slideInterval = 3000; // Byter bild var 3:e sekund
+    const slideInterval = 6000; // Byter bild var 6:e sekund
 
     function changeSlide(direction) {
         slides[currentSlide].classList.remove('active');
