@@ -26,7 +26,7 @@
 
     <section class="hero">
         <h1>Coming soon!</h1><br>
-        <p>Denna receptsida är under utveckling</p>
+        <h4>Denna receptsida är under utveckling</h4>
 
     </section>
 
@@ -46,9 +46,11 @@
     </div>
 	
     <div class="carousel">
-        <img src="https://via.placeholder.com/600x400?text=Image+1" class="active" alt="Image 1">
-        <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
-        <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
+        <img src="/images/Aloo-gobi-foto-Nurlan-Emir-Mathem-800x800.jpg" class="active" alt="Image 1">
+        <img src="/images/images.jpg" alt="Image 2">
+        <img src="/images/Klassisk_lasagne_med_gronsallad-foto-sanna-livijn-wexell-1500.jpg" alt="Image 3">
+        <img src="/images/kycklingpasta-med-soltorkade-tomater_1580.avif" alt="Image 4">
+        <img src="/images/Grillad-flankstek-med-chimichurrisas.png" alt="Image 5">
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
@@ -98,7 +100,7 @@
                                 <p>Upptäck vår receptportal, där tiden är viktigaste ingrediensen! Med vårt digitala verktyg kan du snabbt hitta och skapa läckra måltider på nolltid.</p>
                             </div>
                             <div class="footer-social-icon">
-                                <span>Följa oss</span>
+                                <span>Följ oss</span>
                                 <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
                                 <a href="#"><i class="fab fa-pinterest pinterest-bg"></i></a>
                                 <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
@@ -123,7 +125,7 @@
                                 <h3>Prenumerera</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Missa inte att prenumerera på våra nya flöden, vänligen fyll i formuläret nedan. </p>
+                                <p>Missa inte att prenumerera på våra nya flöde, vänligen fyll i formuläret nedan. </p>
                             </div>
                             <div class="subscribe-form">
                                 <form action="#">
@@ -153,7 +155,7 @@
     <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel img');
-    const slideInterval = 3000; // Byter bild var 3:e sekund
+    const slideInterval = 6000; // Byter bild var 6:e sekund
 
     function changeSlide(direction) {
         slides[currentSlide].classList.remove('active');

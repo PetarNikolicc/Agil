@@ -171,18 +171,18 @@
   padding: 14px 28px;
   background: #2E2E2E;
   border: 1px solid #2E2E2E;
-  color: #fff;
+  color: #ffffff;
 }
 .subscribe-form button {
     position: absolute;
     right: 0;
     background: #ff5e14;
-    padding: 13px 20px;
+    padding: 30px 20px;
     border: 1px solid #ff5e14;
     top: 0;
 }
 .subscribe-form button i {
-  color: #fff;
+  color: #f8f8f8;
   font-size: 22px;
   transform: rotate(-6deg);
 }
