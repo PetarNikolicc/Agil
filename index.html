@@ -14,6 +14,7 @@
     <div class="menu-tab" onclick="openNav()" aria-label="Open sidebar">☰</div>
     
     <div id="mySidebar" class="sidebar" aria-expanded="false">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
         <a href="#about" onclick="closeNav()">Om oss</a>
         <a href="#recipes" onclick="closeNav()">Snabba recept</a>
         <a href="#ingredients" onclick="closeNav()">Skriv in dina Ingredienser</a>
@@ -21,9 +22,11 @@
         <a href="#contact" onclick="closeNav()">Kontakt</a>
     </div>
 
+    <div id="overlay" class="overlay" onclick="closeNav()"></div>
+
     <section class="hero">
         <h1>Coming soon!</h1><br>
-        <p>Denna receptsida är på gång</p>
+        <p>Denna receptsida är under utveckling</p>
 
     </section>
 
@@ -52,7 +55,7 @@
     
     
     <footer class="footer-section">
-        <div class="footer-container">
+        <div class="footer-container" id="contact">
             <div class="footer-cta pt-5 pb-5">
                 <div class="footer-row">
                     <div class="col-xl-4 col-md-4 mb-30">
