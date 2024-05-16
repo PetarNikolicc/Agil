@@ -22,7 +22,7 @@ body {
     z-index: 2;
     top: 0;
     left: 0;
-    background-color: #373636;
+    background-color: #202020;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -32,14 +32,14 @@ body {
     padding: 15px 25px;
     text-decoration: none;
     font-size: 25px;
-    color: #ff5e14;
+    color: white;
     display: block;
     transition: 0.3s;
 }
 
-.sidebar a:hover {
-    background-color: #444343ec;
-}
+/* .sidebar a:hover {
+    background-color: #f04d4d;
+} */
 
 .sidebar .closebtn {
     position: absolute;
@@ -58,15 +58,3 @@ body {
     display: none;
 }
 
-.hero {
-    background-image: url('images/ingredients.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: right;
-    font-size: 2rem;
-}

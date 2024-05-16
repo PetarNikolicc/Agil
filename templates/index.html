@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylesidebar.css">
-    <link rel="stylesheet" href="cardstyle.css">
-    <link rel="stylesheet" href="footerstyle.css">
-    <link rel="stylesheet" href="karusell.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/stylesidebar.css">
+    <link rel="stylesheet" href="/static/cardstyle.css">
+    <link rel="stylesheet" href="/static/footerstyle.css">
+    <link rel="stylesheet" href="/static/karusell.css">
 </head>
 <body>
     <div class="menu-tab" onclick="openNav()" aria-label="Open sidebar">☰</div>
     
     <div id="mySidebar" class="sidebar" aria-expanded="false">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
         <a href="#about" onclick="closeNav()">Om oss</a>
         <a href="#recipes" onclick="closeNav()">Snabba recept</a>
         <a href="#ingredients" onclick="closeNav()">Skriv in dina Ingredienser</a>
@@ -21,16 +22,18 @@
         <a href="#contact" onclick="closeNav()">Kontakt</a>
     </div>
 
+    <div id="overlay" class="overlay" onclick="closeNav()"></div>
+
     <section class="hero">
         <h1>Coming soon!</h1><br>
-        <p>Denna receptsida är på gång</p>
+        <p>Denna receptsida är under utveckling</p>
 
     </section>
 
     <div class="card-container">
         <div class="card">
-            <h2>Tid</h2>
-            <input type="text" placeholder="Sök på tiden..." id="search-tid">
+            <h2>Tips</h2>
+            <input type="text" placeholder="Sök på tips..." id="search-tips">
         </div>
         <div class="card">
             <h2>Ingredienser</h2>
@@ -43,16 +46,16 @@
     </div>
 	
     <div class="carousel">
-        <img src="images/kycklingpasta-med-soltorkade-tomater_1580.avif" class="active" alt="Image 1">
-        <img src="images/Grillad-flankstek-med-chimichurrisas.png" alt="Image 2">
-        <img src="images/Aloo-gobi-foto-Nurlan-Emir-Mathem-800x800.jpg" alt="Image 3">
+        <img src="https://via.placeholder.com/600x400?text=Image+1" class="active" alt="Image 1">
+        <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
     
     
     <footer class="footer-section">
-        <div class="footer-container">
+        <div class="footer-container" id="contact">
             <div class="footer-cta pt-5 pb-5">
                 <div class="footer-row">
                     <div class="col-xl-4 col-md-4 mb-30">
@@ -89,7 +92,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href=""><img src="images/Matminuterna151414.png" class="img-fluid" alt="logo"></a>
+                                <a href=""><img src="/images/Matminuterna151414.png" class="img-fluid" alt="logo"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Upptäck vår receptportal, där tiden är viktigaste ingrediensen! Med vårt digitala verktyg kan du snabbt hitta och skapa läckra måltider på nolltid.</p>
@@ -150,7 +153,7 @@
     <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel img');
-    const slideInterval = 6000; // Byter bild var 6:e sekund
+    const slideInterval = 3000; // Byter bild var 3:e sekund
 
     function changeSlide(direction) {
         slides[currentSlide].classList.remove('active');
