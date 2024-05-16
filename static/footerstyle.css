@@ -211,5 +211,50 @@
   font-size: 14px;
   color: #878787;
   margin: 15px;
-
+}
+@media only screen and (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-content {
+    padding: 10px;
+    text-align: center;
+    
+  }
+  
+  .footer-pattern img {
+    height: 150px; 
+  }
+  
+  .footer-logo img {
+    max-width: 200px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer-text p {
+    width: auto;
+    text-align: center;
+  }
+  
+  .footer-widget-heading {
+    text-align: center;
+  }
+  
+  .footer-widget-heading h3::before {
+    display: none;
+  }
+  
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+  }
 }
