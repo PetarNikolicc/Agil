@@ -15,6 +15,14 @@ body, html {
     text-align: right;
     font-size: 2rem;
   }
+  .hero {
+    height: 300px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
   /*.container {
     height: 80vh;
     background: #000;
@@ -42,3 +50,4 @@ body, html {
     text-align: center;
     padding: 20px;
   }
+

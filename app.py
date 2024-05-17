@@ -45,8 +45,7 @@ with app.app_context():
 @app.route("/")
 def homepage():
     recipes = Recipes.query.all()
-    print(recipes[1])
-    return render_template("base.html")
+    return render_template("index.html", recipes=recipes)
 
 
 
