@@ -11,10 +11,15 @@
     <link rel="stylesheet" href="/static/karusell.css">
 </head>
 <body>
+
     <div class="menu-tab" onclick="openNav()" aria-label="Open sidebar">☰</div>
     
     <div id="mySidebar" class="sidebar" aria-expanded="false">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
+        <div class="sidebar-header">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
+            <img src="/images/Matminuterna151414.png" alt="Matminuterna Logo">
+        </div>
+            
         <a href="#about" onclick="closeNav()">Om oss</a>
         <a href="#recipes" onclick="closeNav()">Snabba recept</a>
         <a href="#ingredients" onclick="closeNav()">Skriv in dina Ingredienser</a>
@@ -46,9 +51,11 @@
     </div>
 	
     <div class="carousel">
-        <img src="https://via.placeholder.com/600x400?text=Image+1" class="active" alt="Image 1">
-        <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
-        <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
+        <img src="/images/tacos.jpg" class="active" alt="tacos image">
+        <img src="/images/picnic.jpg" alt="picnic image">
+        <img src="/images/completo.jpg" alt="completo image">
+        <img src="/images/spanglishsandwich.jpg" alt="sandwich image">
+        <img src="/images/lax.jpg" alt="salmon image">
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
@@ -170,11 +177,11 @@
 
     <script>
         function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("mySidebar").style.width = "170px"; // Minska bredden på sidobaren
             document.getElementById("overlay").style.display = "block";
             document.getElementById("mySidebar").setAttribute('aria-expanded', 'true');
         }
-    
+        
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("overlay").style.display = "none";
