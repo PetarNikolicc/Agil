@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/stylesidebar.css">
+    <link rel="stylesheet" href="/static/cardstyle.css">
+    <link rel="stylesheet" href="/static/footerstyle.css">
+    <link rel="stylesheet" href="/static/karusell.css">
+</head>
+<body>
+    <div class="menu-tab" onclick="openNav()" aria-label="Open sidebar">☰</div>
+    
+    <div id="mySidebar" class="sidebar" aria-expanded="false">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
+        <a href="#about" onclick="closeNav()">Om oss</a>
+        <a href="#recipes" onclick="closeNav()">Snabba recept</a>
+        <a href="#ingredients" onclick="closeNav()">Skriv in dina Ingredienser</a>
+        <a href="#favorites" onclick="closeNav()">Favoriter</a>
+        <a href="#contact" onclick="closeNav()">Kontakt</a>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeNav()"></div>
+
+    <section class="hero">
+        <h1>Coming soon!</h1><br>
+        <p>Denna receptsida är under utveckling</p>
+
+    </section>
+    
+    
+    <div class="card-container">
+        
+        <form method="get">
+            <div class="card">
+                <h2>Tid</h2>
+                <input type="text" name="minutes" placeholder="Sök på tid..." id="search-tid">
+                <button class="cardsbutton" type="submit">Sök!</button>
+            </div>
+        </form>
+
+        <div class="card">
+            <h2>Ingredienser</h2>
+            <input type="text" placeholder="Kommer snart.." id="search-ingredients" disabled>
+        </div>
+        <div class="card">
+            <h2>Popularitet</h2>
+            <input type="text" placeholder="Kommer snart.." id="search-popularity" disabled>
+        </div>
+    </div>
+    {% block content %}
+	{% endblock %}
+    <div class="carousel">
+        <img src="https://via.placeholder.com/600x400?text=Image+1" class="active" alt="Image 1">
+        <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    
+    
+    {% include "footer.html" %}
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    const slideInterval = 3000; // Byter bild var 3:e sekund
+
+    function changeSlide(direction) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function autoSlide() {
+        changeSlide(1);
+    }
+
+    setInterval(autoSlide, slideInterval);
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("mySidebar").setAttribute('aria-expanded', 'true');
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("mySidebar").setAttribute('aria-expanded', 'false');
+        }
+    </script>
+</body>
+</html>
