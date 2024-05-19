@@ -1,47 +1,69 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .menu-tab {
     color: black;
-    padding: 15px;
     cursor: pointer;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    font-size: 40px;
+    top: 5px;
+    left: 5px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
 }
 
 .sidebar {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    background-color: #202020;
+    z-index: 2;
+    top: 5px;
+    left: 5px;
+    background-color: black;
+    color: #fff;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+}
+
+.sidebar-header img {
+    max-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sidebar-header .logo {
+    max-height: 5px;
+    max-width: 250px;
+    margin-left: 0px;
+    display: flex;
+}
+
+.sidebar-header .closebtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    top: 5px;
+    left: 5px;
+    padding: 0;
 }
 
 .sidebar a {
-    padding: 15px 25px;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 15px;
     color: white;
     display: block;
     transition: 0.3s;
+    margin:10px 0;
+    border-radius: 4px;
 }
 
 .sidebar a:hover {
-    background-color: #ff5e14;
-}
+    background-color: #575757;
+} 
 
-.sidebar .closebtn {
+.sidebar {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -57,4 +79,5 @@ body {
     z-index: 2;
     display: none;
 }
+
 

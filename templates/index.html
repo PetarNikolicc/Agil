@@ -11,10 +11,15 @@
     <link rel="stylesheet" href="/static/karusell.css">
 </head>
 <body>
+
     <div class="menu-tab" onclick="openNav()" aria-label="Open sidebar">☰</div>
     
     <div id="mySidebar" class="sidebar" aria-expanded="false">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
+        <div class="sidebar-header">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
+            <img src="/images/Matminuterna151414.png" alt="Matminuterna Logo">
+        </div>
+            
         <a href="#about" onclick="closeNav()">Om oss</a>
         <a href="#recipes" onclick="closeNav()">Snabba recept</a>
         <a href="#ingredients" onclick="closeNav()">Skriv in dina Ingredienser</a>
@@ -53,6 +58,7 @@
         <img src="/images/Grillad-flankstek-med-chimichurrisas.png" alt="Image 5">
         <a class="prev" onclick="changeSlide(-2)">&#10094;</a>
         <a class="next" onclick="changeSlide(2)">&#10095;</a>
+
     </div>
     
     
@@ -172,11 +178,11 @@
 
     <script>
         function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("mySidebar").style.width = "170px"; // Minska bredden på sidobaren
             document.getElementById("overlay").style.display = "block";
             document.getElementById("mySidebar").setAttribute('aria-expanded', 'true');
         }
-    
+        
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("overlay").style.display = "none";
