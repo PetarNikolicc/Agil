@@ -6,10 +6,13 @@ body {
     max-width: 600px;
     margin: auto;
     overflow: hidden;
+    padding: 40px;
+
 }
 .carousel img {
     width: 100%;
-    display: none;
+    display: none; 
+
 }
 .carousel img.active {
     display: block;

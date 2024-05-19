@@ -31,14 +31,14 @@
 
     <section class="hero">
         <h1>Coming soon!</h1><br>
-        <p>Denna receptsida är under utveckling</p>
+        <h4>Denna receptsida är under utveckling</h4>
 
     </section>
 
     <div class="card-container">
         <div class="card">
-            <h2>Tips</h2>
-            <input type="text" placeholder="Sök på tips..." id="search-tips">
+            <h2>Tid</h2>
+            <input type="text" placeholder="Sök på tid..." id="search-tid">
         </div>
         <div class="card">
             <h2>Ingredienser</h2>
@@ -51,13 +51,14 @@
     </div>
 	
     <div class="carousel">
-        <img src="/images/tacos.jpg" class="active" alt="tacos image">
-        <img src="/images/picnic.jpg" alt="picnic image">
-        <img src="/images/completo.jpg" alt="completo image">
-        <img src="/images/spanglishsandwich.jpg" alt="sandwich image">
-        <img src="/images/lax.jpg" alt="salmon image">
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <img src="/images/kyckling i ugn.jpg" class="active" alt="Image 1">
+        <img src="/images/Citronmarinerad-lax.avif" alt="Image 2">
+        <img src="/images/Klassisk_lasagne_med_gronsallad-foto-sanna-livijn-wexell-1500.jpg" alt="Image 3">
+        <img src="/images/kycklingpasta-med-soltorkade-tomater_1580.avif" alt="Image 4">
+        <img src="/images/Grillad-flankstek-med-chimichurrisas.png" alt="Image 5">
+        <a class="prev" onclick="changeSlide(-2)">&#10094;</a>
+        <a class="next" onclick="changeSlide(2)">&#10095;</a>
+
     </div>
     
     
@@ -105,7 +106,7 @@
                                 <p>Upptäck vår receptportal, där tiden är viktigaste ingrediensen! Med vårt digitala verktyg kan du snabbt hitta och skapa läckra måltider på nolltid.</p>
                             </div>
                             <div class="footer-social-icon">
-                                <span>Följa oss</span>
+                                <span>Följ oss</span>
                                 <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
                                 <a href="#"><i class="fab fa-pinterest pinterest-bg"></i></a>
                                 <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
@@ -130,7 +131,7 @@
                                 <h3>Prenumerera</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Missa inte att prenumerera på våra nya flöden, vänligen fyll i formuläret nedan. </p>
+                                <p>Missa inte att prenumerera på våra nya flöde, vänligen fyll i formuläret nedan. </p>
                             </div>
                             <div class="subscribe-form">
                                 <form action="#">
@@ -160,7 +161,7 @@
     <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel img');
-    const slideInterval = 3000; // Byter bild var 3:e sekund
+    const slideInterval = 6000; // Byter bild var 6:e sekund
 
     function changeSlide(direction) {
         slides[currentSlide].classList.remove('active');
