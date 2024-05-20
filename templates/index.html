@@ -4,12 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/stylesidebar.css">
+    <link rel="stylesheet" href="/static/cardstyle.css">
+    <link rel="stylesheet" href="/static/footerstyle.css">
+    <link rel="stylesheet" href="/static/karusell.css">
 </head>
 <body>
+    <div class="menu-tab" onclick="openNav()" aria-label="Open sidebar">☰</div>
+    
+    <div id="mySidebar" class="sidebar" aria-expanded="false">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" aria-label="Close sidebar">☰</a>
+        <a href="#about" onclick="closeNav()">Om oss</a>
+        <a href="#recipes" onclick="closeNav()">Snabba recept</a>
+        <a href="#ingredients" onclick="closeNav()">Skriv in dina Ingredienser</a>
+        <a href="#favorites" onclick="closeNav()">Favoriter</a>
+        <a href="#contact" onclick="closeNav()">Kontakt</a>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeNav()"></div>
+
+    <section class="hero">
+        <h1>Coming soon!</h1><br>
+        <p>Denna receptsida är under utveckling</p>
+
+    </section>
+
+    <div class="card-container">
+        <div class="card">
+            <h2>Tips</h2>
+            <input type="text" placeholder="Sök på tips..." id="search-tips">
+        </div>
+        <div class="card">
+            <h2>Ingredienser</h2>
+            <input type="text" placeholder="Sök på ingredienser..." id="search-ingredients">
+        </div>
+        <div class="card">
+            <h2>Popularitet</h2>
+            <input type="text" placeholder="Sök på popularitet..." id="search-popularity">
+        </div>
+    </div>
+	
+    <div class="carousel">
+        <img src="https://via.placeholder.com/600x400?text=Image+1" class="active" alt="Image 1">
+        <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    
+    
     <footer class="footer-section">
-        <div class="footer-container">
+        <div class="footer-container" id="contact">
             <div class="footer-cta pt-5 pb-5">
                 <div class="footer-row">
                     <div class="col-xl-4 col-md-4 mb-30">
@@ -46,16 +92,16 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href=""><img src="logo/Matminuterna151414.png" class="img-fluid" alt="logo"></a>
+                                <a href=""><img src="/images/Matminuterna151414.png" class="img-fluid" alt="logo"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Upptäck vår receptportal, där tiden är viktigaste ingrediensen! Med vårt digitala verktyg kan du snabbt hitta och skapa läckra måltider på nolltid.</p>
                             </div>
                             <div class="footer-social-icon">
                                 <span>Följa oss</span>
-                                <a href="https://www.facebook.com/profile.php?id=61560132141356"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
                                 <a href="#"><i class="fab fa-pinterest pinterest-bg"></i></a>
-                                <a href="https://www.instagram.com/matminuterna/"><i class="fab fa-instagram instagram-bg"></i></a>
+                                <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
                             </div>
                         </div>
                     </div>
@@ -80,8 +126,8 @@
                                 <p>Missa inte att prenumerera på våra nya flöden, vänligen fyll i formuläret nedan. </p>
                             </div>
                             <div class="subscribe-form">
-                                <form action="matminuternagrupp@gmail.com">
-                                    <input type="text" placeholder="Email Address">
+                                <form action="#">
+                                    <input type="text" placeholder="matminuternagrupp@gmail.com">
                                     <button><i class="fab fa-telegram-plane"></i></button>
                                 </form>
                             </div>
@@ -104,5 +150,36 @@
         </div>
     </footer>
 
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    const slideInterval = 3000; // Byter bild var 3:e sekund
+
+    function changeSlide(direction) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function autoSlide() {
+        changeSlide(1);
+    }
+
+    setInterval(autoSlide, slideInterval);
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("mySidebar").setAttribute('aria-expanded', 'true');
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("mySidebar").setAttribute('aria-expanded', 'false');
+        }
+    </script>
 </body>
 </html>
