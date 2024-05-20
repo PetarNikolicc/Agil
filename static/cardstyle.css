@@ -12,7 +12,7 @@ body {
 }
 
 .hero {
-    background-image: url(/images/AI_Image.jpg);
+    background-image: url(/static/images/AI_Image.jpg);
     background-size: cover;
     background-position: center;
     justify-content: center;
