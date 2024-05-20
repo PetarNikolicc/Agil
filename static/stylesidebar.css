@@ -14,8 +14,8 @@
     width: 0;
     position: fixed;
     z-index: 2;
-    top: 5px;
-    left: 5px;
+    top: 0; 
+    left: 0; 
     background-color: black;
     color: #fff;
     overflow-x: hidden;
@@ -31,7 +31,7 @@
 }
 
 .sidebar-header .logo {
-    max-height: 5px;
+    max-height: 15px; 
     max-width: 250px;
     margin-left: 0px;
     display: flex;
@@ -55,20 +55,14 @@
     color: white;
     display: block;
     transition: 0.3s;
-    margin:10px 0;
+    margin: 10px 0;
     border-radius: 4px;
+    font-weight: 600;
 }
 
 .sidebar a:hover {
     background-color: #575757;
 } 
-
-.sidebar {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    font-size: 30px;
-}
 
 .overlay {
     position: fixed;
@@ -79,5 +73,8 @@
     z-index: 1;
     display: none;
 }
+
+
+
 
 
