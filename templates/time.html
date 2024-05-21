@@ -1,0 +1,73 @@
+{% extends "index.html" %}
+
+{% block title %}
+Document
+{% endblock %}
+
+{% block content %}
+<div class="card-container">
+    <form method="get">
+        <div class="card">
+            <h2>Tid</h2>
+            <input type="text" name="minutes" placeholder="Sök på tid..." id="search-tid">
+            <button class="cardsbutton" type="submit">Sök!</button>
+        </div>
+    </form>
+
+    <form method="get">
+        <div class="card">
+            <h2>Ingredienser</h2>
+            <input type="text" name="ingredients" placeholder="Sök på ingredienser..." id="search-ingredients">
+            <button class="cardsbutton" type="submit">Sök!</button>
+        </div>
+    </form>
+</div>
+
+<table class="mytabletop">
+    <thead class="mytable">
+        <tr>
+            <td>
+                Namn
+                <a
+                    href="{{url_for('app.recipes', sort_by_order='asc', sort_column_id='name', get_users = get_users)}}"></a>
+            </td>
+            <td>
+                Minuter
+                <a
+                    href="{{url_for('app.recipes', sort_by_order='asc', sort_column_id='minutes', get_users = get_users)}}"></a>
+            </td>
+            <td>
+                Antal Steg
+                <a
+                    href="{{url_for('app.recipes', sort_by_order='asc', sort_column_id='n_steps', get_users = get_users)}}"></a>
+            </td>
+            <td>
+                Steg
+                <a
+                    href="{{url_for('app.recipes', sort_by_order='asc', sort_column_id='steps', get_users = get_users)}}"></a>
+            </td>
+            <td>
+                Ingredienser
+                <a
+                    href="{{url_for('app.recipes', sort_by_order='asc', sort_column_id='ingredients', get_users = get_users)}}"></a>
+            </td>
+            <td>
+                Antal Ingredienser
+            </td>
+        </tr>
+    </thead>
+
+    {% for user in users %}
+    <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.country}}</td>
+        <td><a href="/single_user_page/{{user.id}}"><img src="https://robohash.org/{{user.id}}.jpg?size=50x50"></a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

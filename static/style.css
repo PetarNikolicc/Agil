@@ -3,7 +3,37 @@ body, html {
     padding: 0;
     height: 100%;
   }
- 
+  .hero {
+    background-image: url('images/ingredients.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+  }
+  .hero {
+    height: 300px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  /*.container {
+    height: 80vh;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  */
   .features {
     display: flex;
     justify-content: space-around;
@@ -20,3 +50,4 @@ body, html {
     text-align: center;
     padding: 20px;
   }
+

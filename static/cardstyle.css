@@ -2,24 +2,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.hero {
-    height: 350px;
-    background-color: #f8f8f8;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 100px;
-}
-
-.hero {
-    background-image: url(/images/AI_Image.jpg);
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
-    color: rgb(83, 141, 7);
-    font-size: 1rem;
-  }
 .card-container {
     display: flex;
     justify-content: space-around;
