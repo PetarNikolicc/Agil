@@ -25,11 +25,14 @@
     {% block content %}
 	{% endblock %}
     <div class="carousel">
-        <img src="https://via.placeholder.com/600x400?text=Image+1" class="active" alt="Image 1">
-        <img src="https://via.placeholder.com/600x400?text=Image+2" alt="Image 2">
-        <img src="https://via.placeholder.com/600x400?text=Image+3" alt="Image 3">
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <img src="/static/images/kyckling i ugn.jpg" class="active" alt="Image 1">
+        <img src="/static/images/Citronmarinerad-lax.avif" alt="Image 2">
+        <img src="/static/images/Klassisk_lasagne_med_gronsallad-foto-sanna-livijn-wexell-1500.jpg" alt="Image 3">
+        <img src="/static/images/kycklingpasta-med-soltorkade-tomater_1580.avif" alt="Image 4">
+        <img src="/static/images/Grillad-flankstek-med-chimichurrisas.png" alt="Image 5">
+        <a class="prev" onclick="changeSlide(-2)">&#10094;</a>
+        <a class="next" onclick="changeSlide(2)">&#10095;</a>
+
     </div>
     
     
@@ -38,7 +41,7 @@
     <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel img');
-    const slideInterval = 3000; // Byter bild var 3:e sekund
+    const slideInterval = 6000; // Byter bild var 3:e sekund
 
     function changeSlide(direction) {
         slides[currentSlide].classList.remove('active');
@@ -66,9 +69,6 @@
             document.getElementById("mySidebar").setAttribute('aria-expanded', 'false');
         }
     </script>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
