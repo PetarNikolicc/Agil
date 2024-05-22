@@ -33,8 +33,9 @@
     {% include "footer.html" %}
 
     <script>
+        const currentUrl = window.location.href;
         function fetchRecipes(time) {
-            fetch(`/filter?time=${time}`)
+            fetch(`${currentUrl}/filter?time=${time}`)
                 .then(response => response.json())
                 .then(data => {
                     let recipesList = document.getElementById('recipes-list');
