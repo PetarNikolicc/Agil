@@ -2,10 +2,10 @@ from flask import Flask, render_template, render_template, request, redirect, ur
 import sqlite3
 # from flask_sqlalchemy import SQLAlchemy
 # from sqlalchemy import Column, Integer, String, Text
-# import os
+import os
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 # basedir = os.path.abspath(os.path.dirname(__file__))
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'Database.db')

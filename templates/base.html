@@ -9,9 +9,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/stylesidebar.css">
-    
     <link rel="stylesheet" href="/static/footerstyle.css">
     <link rel="stylesheet" href="/static/karusell.css">
+
+</head>
+<body>
+    {% include "navbar.html" %}
+
+    {% include "header.html" %}
+    
+    {% block content %}
+	{% endblock %}
+    <div class="carousel">
+        <img src="/static/images/tacos.jpg" class="active" alt="Image 1">
+        <img src="/static/images/spanglishsandwich.jpg" alt="Image 2">
+        <img src="/static/images/picnic.jpg" alt="Image 3">
+        <img src="/static/images/completo.jpg" alt="Image 4">
+        <img src="/static/images/lax.jpg" alt="Image 5">
+        <a class="prev" onclick="changeSlide(-2)">&#10094;</a>
+        <a class="next" onclick="changeSlide(2)">&#10095;</a>
+    </div>
+    
+    {% include "footer.html" %}
 
     <script>
         function fetchRecipes(time) {
@@ -28,29 +47,6 @@
                 });
         }
     </script>
-</head>
-<body>
-    {% include "navbar.html" %}
-
-    {% include "header.html" %}
-    
-    
-    
-    {% block content %}
-	{% endblock %}
-    <div class="carousel">
-        <img src="/static/images/tacos.jpg" class="active" alt="Image 1">
-        <img src="/static/images/spanglishsandwich.jpg" alt="Image 2">
-        <img src="/static/images/picnic.jpg" alt="Image 3">
-        <img src="/static/images/completo.jpg" alt="Image 4">
-        <img src="/static/images/lax.jpg" alt="Image 5">
-        <a class="prev" onclick="changeSlide(-2)">&#10094;</a>
-        <a class="next" onclick="changeSlide(2)">&#10095;</a>
-
-    </div>
-    
-    
-    {% include "footer.html" %}
 
     <script>
     let currentSlide = 0;
