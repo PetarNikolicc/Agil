@@ -33,10 +33,14 @@
     {% include "footer.html" %}
 
     <script>
-        const currentUrl = window.location.href;
         function fetchRecipes(time) {
-            fetch(`${currentUrl}/filter?time=${time}`)
-                .then(response => response.json())
+            fetch(`/filter?time=${time}`)
+                .then(response => {
+                    if (!response.ok) {
+                        return response.text().then(text => { throw new Error(text) });
+                    }
+                    return response.json();
+                })
                 .then(data => {
                     let recipesList = document.getElementById('recipes-list');
                     recipesList.innerHTML = '';
@@ -45,6 +49,11 @@
                         li.textContent = `${recipe[1]} - ${recipe[2]} minuter`;
                         recipesList.appendChild(li);
                     });
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                    let recipesList = document.getElementById('recipes-list');
+                    recipesList.innerHTML = `<li>Error: ${error.message}</li>`;
                 });
         }
     </script>
