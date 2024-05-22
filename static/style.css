@@ -13,7 +13,7 @@ body, html {
     padding-top: 100px;
 }
 .hero {
-  background-image: url("static/images/Matminuterna(1).png");
+  background-image: url("/static/images/Matminuterna.png");
   background-size: cover;
   background-position: center;
   justify-content: center;

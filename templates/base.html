@@ -13,7 +13,21 @@
     <link rel="stylesheet" href="/static/footerstyle.css">
     <link rel="stylesheet" href="/static/karusell.css">
 
-    
+    <script>
+        function fetchRecipes(time) {
+            fetch(`/filter?time=${time}`)
+                .then(response => response.json())
+                .then(data => {
+                    let recipesList = document.getElementById('recipes-list');
+                    recipesList.innerHTML = '';
+                    data.forEach(recipe => {
+                        let li = document.createElement('li');
+                        li.textContent = `${recipe[1]} - ${recipe[2]} minuter`;
+                        recipesList.appendChild(li);
+                    });
+                });
+        }
+    </script>
 </head>
 <body>
     {% include "navbar.html" %}

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, render_template, request, redirect, url_for
+from flask import Flask, render_template, render_template, request, redirect, url_for, jsonify
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, Text
@@ -39,7 +39,27 @@ with app.app_context():
         db.session.add(recipe)
     db.session.commit()
 
+def get_recipes_by_time(max_time):
+    conn = sqlite3.connect('recipes.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM recipes WHERE cooking_time <= ?", (max_time,))
+    recipes = cursor.fetchall()
+    conn.close()
+    return recipes
+
+
+
 @app.route("/")
 def homepage():
     recipes = Recipes.query.all()
     return render_template("index.html", recipes=recipes)
+
+
+@app.route('/filter', methods=['GET'])
+def filter_recipes():
+    max_time = request.args.get('time')
+    recipes = get_recipes_by_time(max_time)
+    return jsonify(recipes)
+
+if __name__ == '__main__':
+    app.run(debug=True)
