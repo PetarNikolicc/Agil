@@ -5,7 +5,7 @@ import sqlite3
 import os
 import pandas as pd
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__)
 
 # basedir = os.path.abspath(os.path.dirname(__file__))
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'Database.db')
@@ -40,17 +40,22 @@ app = Flask(__name__, static_url_path='/static')
 #     db.session.commit()
 
 def get_recipes_by_time(max_time):
-    conn = sqlite3.connect('recipes.db')
+    db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM recipes WHERE cooking_time <= ?", (max_time,))
     recipes = cursor.fetchall()
     conn.close()
     return recipes
 
-@app.route("/")
+@app.route('/')
 def homepage():
-    # recipes = Recipes.query.all()
-    return render_template("index.html") #, recipes=recipes
+    time = request.args.get('time')
+    if time:
+        recipes = get_recipes_by_time(time)
+    else:
+        recipes = get_recipes_by_time(60)  # Default to 60 minutes or you can choose to show all or none
+    return render_template('index.html', recipes=recipes)
 
 @app.route('/filter', methods=['GET'])
 def filter_recipes():

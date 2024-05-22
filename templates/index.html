@@ -7,17 +7,19 @@
 {% endblock %}
 
 {% block content %}
-<div style="text-align:center;">
     <h1>Välj tillagningstid</h1>
-    <button onclick="fetchRecipes(15)">15 minuter</button>
-    <button onclick="fetchRecipes(30)">30 minuter</button>
-    <button onclick="fetchRecipes(60)">60 minuter</button>
+    <form method="get" action="/">
+        <button type="submit" name="time" value="15">15 minuter</button>
+        <button type="submit" name="time" value="30">30 minuter</button>
+        <button type="submit" name="time" value="60">60 minuter</button>
+    </form>
 
     <h2>Recept</h2>
     <ul id="recipes-list">
-        <!-- Resultat -->
+        {% for recipe in recipes %}
+            <li>{{ recipe[1] }} - {{ recipe[2] }} minuter</li>
+        {% endfor %}
     </ul>
-</div>
 <!-- <table class="table table-striped table-hover">
     <thead class="mytable">
         <tr>
