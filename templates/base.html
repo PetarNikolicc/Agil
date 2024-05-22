@@ -33,32 +33,6 @@
     {% include "footer.html" %}
 
     <script>
-        function fetchRecipes(time) {
-            fetch(`/filter?time=${time}`)
-                .then(response => {
-                    if (!response.ok) {
-                        return response.text().then(text => { throw new Error(text) });
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    let recipesList = document.getElementById('recipes-list');
-                    recipesList.innerHTML = '';
-                    data.forEach(recipe => {
-                        let li = document.createElement('li');
-                        li.textContent = `${recipe[1]} - ${recipe[2]} minuter`;
-                        recipesList.appendChild(li);
-                    });
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
-                    let recipesList = document.getElementById('recipes-list');
-                    recipesList.innerHTML = `<li>Error: ${error.message}</li>`;
-                });
-        }
-    </script>
-
-    <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel img');
     const slideInterval = 6000; // Byter bild var 3:e sekund
