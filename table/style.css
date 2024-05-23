@@ -1,0 +1,100 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    overflow: hidden;
+    
+  }
+  
+
+    .container {
+        padding-top: 20px;
+        color: #fff;
+        background-color: #151414;
+    }
+
+    h1, h2 {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    th, td {
+        color: #fff;
+    }
+
+    .btn-primary {
+        background-color: #ff5e14;
+        border-color: #ff5e14;
+        margin: 10px;
+        padding: 10px 20px;
+    }
+
+    .btn-primary:hover {
+        background-color: #e65100;
+        border-color: #e65100;
+    }
+
+    .table {
+        color: #fff;
+        padding: 10px;
+        display: none /* Lägg till padding här */
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #2E2E2E;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #4e4e4e;
+    }
+
+    .btn-footer {
+        background-color: #202020;
+        color: #fff;
+        border-color: #202020;
+        margin: 10px;
+        padding: 10px 20px;
+    }
+
+    .btn-footer:hover {
+        background-color: #121212;
+        color: #fff;
+        border-color: #121212;
+    }
+
+    .btn-footer:active {
+        background-color: #555;
+        color: #fff;
+        border-color: #555;
+    }
+
+    a.footer-link {
+        color: #ff5e14;
+    }
+
+    a.footer-link:hover {
+        color: #e65100;
+    }
+
+    a.footer-link:active {
+        color: #555;
+    }
+
+    @media only screen and (max-width: 767px) {
+        h1, h2 {
+            font-size: 1.5rem;
+        }
+
+        .btn-primary, .btn-footer {
+            padding: 8px 16px;
+            margin: 5px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+    }
+
