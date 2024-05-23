@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .hero {
+    height: 350px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+.hero {
+  background-image: url("/static/images/Matminuterna.png");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(83, 141, 7);
+  font-size: 1rem;
+}
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .feature {
+    width: 30%;
+    background: grey;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .details {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+
