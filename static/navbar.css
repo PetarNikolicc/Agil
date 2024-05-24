@@ -1,0 +1,45 @@
+.menu-tab {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: flex;
+}

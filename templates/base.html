@@ -9,32 +9,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/stylesidebar.css">
-    
     <link rel="stylesheet" href="/static/footerstyle.css">
     <link rel="stylesheet" href="/static/karusell.css">
 
-    <script>
-        function fetchRecipes(time) {
-            fetch(`/filter?time=${time}`)
-                .then(response => response.json())
-                .then(data => {
-                    let recipesList = document.getElementById('recipes-list');
-                    recipesList.innerHTML = '';
-                    data.forEach(recipe => {
-                        let li = document.createElement('li');
-                        li.textContent = `${recipe[1]} - ${recipe[2]} minuter`;
-                        recipesList.appendChild(li);
-                    });
-                });
-        }
-    </script>
 </head>
 <body>
     {% include "navbar.html" %}
 
     {% include "header.html" %}
-    
-    
     
     {% block content %}
 	{% endblock %}
@@ -46,9 +28,7 @@
         <img src="/static/images/lax.jpg" alt="Image 5">
         <a class="prev" onclick="changeSlide(-2)">&#10094;</a>
         <a class="next" onclick="changeSlide(2)">&#10095;</a>
-
     </div>
-    
     
     {% include "footer.html" %}
 
