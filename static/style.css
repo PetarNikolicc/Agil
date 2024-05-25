@@ -1,74 +1,63 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-.hero {
-  height: 350px;
-  background-color: #f8f8f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 100px;
-}
-.hero {
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
-  color: rgb(83, 141, 7);
-  font-size: 1rem;
-}
-
-.features {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.feature {
-  width: 30%;
-  background: grey;
-  padding: 20px;
-  cursor: pointer;
-}
-.details {
-  display: none;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero {
-  position: relative;
-  height: 50vh;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
+  margin: 0;
+  padding: 0;
   height: 100%;
-  object-fit: cover;
 }
+
 .hero {
   position: relative;
-  height: 50vh;
+  height: 75vh;
   overflow: hidden;
   margin: 0;
+  background-image: url("/static/images/Hero_image.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(83, 141, 7);
+  font-size: 1rem;
+  padding-top: 100px;
+}
+
+.btn-custom {
+  background-color: white;
+  color: black;
+  border: none; /* Ingen kant */
+  padding: 15px 30px; /* Större knappar */
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Mer skugga vid hovring */
+}
+
+.container {
+  padding-top: 0px; /* justering för att kompensera för navbarens höjd */
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-5 {
+  margin-top: 0 !important;
+}  
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm {
+      max-width: 960px;
+  }
 }
 
 
-.btn-group .btn {
-  border-radius: 0;
-  width: 150px;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-}
-
-.card {
-  transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}

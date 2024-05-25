@@ -1,54 +1,28 @@
 .footer-section {
-  background: #f8f9fa;
-  padding: 60px 0;
+  background: #000;
+  color: #fff;
+  padding: 10px 0; /* Halvera höjden */
+  text-align: center;
 }
 
-.footer-widget {
-  margin-bottom: 30px;
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .footer-logo img {
-  max-width: 150px;
+  max-height: 50px; /* Justera storleken på loggan efter behov */
 }
 
 .footer-text {
-  margin-top: 20px;
-}
-
-.single-cta {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.single-cta i {
-  font-size: 30px;
-  color: #007bff;
-  margin-right: 15px;
-}
-
-.cta-text h4 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.cta-text span {
-  display: block;
+  margin-top: 10px;
   font-size: 14px;
-  color: #777;
 }
 
-.copyright-area {
-  background: #343a40;
-  padding: 20px 0;
+.footer-contact {
+  margin-top: 10px;
+  font-size: 14px;
 }
 
-.copyright-text {
-  color: #fff;
-  margin: 0;
-}
-
-.copyright-text a {
-  color: #007bff;
-  text-decoration: none;
-}
