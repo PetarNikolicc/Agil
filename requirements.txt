@@ -22,8 +22,6 @@ jupyter_client==8.6.1
 jupyter_core==5.7.2
 kiwisolver==1.4.5
 MarkupSafe==2.1.5
-matplotlib==3.9.0
-matplotlib-inline==0.1.7
 nest-asyncio==1.6.0
 numpy==1.26.4
 packaging==24.0
@@ -40,9 +38,7 @@ Pygments==2.18.0
 pyparsing==3.1.2
 python-dateutil==2.9.0.post0
 pytz==2024.1
-pywin32==306
 pyzmq==26.0.3
-seaborn==0.13.2
 six==1.16.0
 SQLAlchemy==2.0.30
 stack-data==0.6.3
