@@ -5,10 +5,14 @@ import os
 app = Flask(__name__)
 
 def get_recipes_by_time(exact_time):
-    db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
+    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'recipes.db'))
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM recipes WHERE cooking_time = ?", (exact_time,))
+
+    results = cursor.fetchall()
+    conn.close()
+    return results
 
 DATABASE = 'recipes.db'
 
@@ -32,18 +36,18 @@ def get_recipes_by_time(time):
     recipes = cursor.fetchall()
     return recipes
 
-@app.route('/')
-def homepage():
-    time = request.args.get('time')
-    if time:
-        try:
-            time = int(time)
-            recipes = get_recipes_by_time(time)
-        except ValueError:
-            recipes = []
-    else:
-        recipes = []
-    return render_template('index.html', recipes=recipes)
+# @app.route('/')
+# def homepage():
+#     time = request.args.get('time')
+#     if time:
+#         try:
+#             time = int(time)
+#             recipes = get_recipes_by_time(time)
+#         except ValueError:
+#             recipes = []
+#     else:
+#         recipes = []
+#     return render_template('index.html', recipes=recipes)
 
 @app.route('/', methods=['GET'])
 def index():
