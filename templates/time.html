@@ -11,7 +11,7 @@
     <a href="/" class="btn btn-custom">Tillbaka till startsidan</a>
     <div class="card-deck">
         {% for recipe in recipes %}
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem;" onclick="openPopup('{{ recipe[0] }}', '{{ recipe[3] }}')">
                 <img src="{{ recipe[2] }}" class="card-img-top" alt="Bild på {{ recipe[0] }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ recipe[0] }}</h5>
@@ -20,6 +20,13 @@
                 </div>
             </div>
         {% endfor %}
+    </div>
+</div>
+<div id="recipePopup" class="popup" style="display:none;">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 id="popupTitle"></h2>
+        <p id="popupText"></p>
     </div>
 </div>
 {% endblock %}
