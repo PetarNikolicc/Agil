@@ -3,7 +3,7 @@
 <head>
 
     {% block head %}
-    {% endblock %}
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="/static/stylesidebar.css">
     <link rel="stylesheet" href="/static/footerstyle.css">
     <link rel="stylesheet" href="/static/karusell.css">
+    {% endblock %}
 
 </head>
 <body>
     {% include "navbar.html" %}
 
     {% include "header.html" %}
-    
+
     {% block content %}
 	{% endblock %}
     <div class="carousel">
