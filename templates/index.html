@@ -6,8 +6,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="container text-center mt-5 pt-3">
-    
+<div class="container text-center mt-5">
+    <div>
+        <p style="display:inline-block; padding:5px; margin:10px; font-family: 'Oleo Script', system-ui; font-size:25px;">Använd tidsknapparna nedan för att välja recept baserat på hur mycket tid du har tillgänglig!</p>
+    </div>
     <form method="get" action="/time">
         <button type="submit" name="time" value="15" class="btn btn-custom">15 minuter</button>
         <button type="submit" name="time" value="30" class="btn btn-custom">30 minuter</button>

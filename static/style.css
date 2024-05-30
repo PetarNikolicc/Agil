@@ -48,7 +48,9 @@ body, html {
   background-color: white;
   color: black;
   border: none; /* Ingen kant */
-  padding: 15px 30px; /* Större knappar */
+  padding: 20px 50px; /* Större knappar */
+  font-size: 20px;
+  font-weight: 450;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga */
