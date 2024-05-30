@@ -1,27 +1,80 @@
-.footer-section {
-  background: #000;
-  color: #fff;
-  padding: 10px 0; /* Halvera höjden */
-  text-align: center;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+
+.footer-section {
+    background: #151414;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-  max-height: 50px; /* Justera storleken på loggan efter behov */
-}
-
-.footer-text {
-  margin-top: 10px;
-  font-size: 14px;
+    max-width: 150px;
 }
 
 .footer-contact {
-  margin-top: 10px;
-  font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.single-cta {
+    display: flex;
+    align-items: center;
+}
+
+.single-cta i {
+    color: #ff5e14;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.cta-text span {
+    color: #757575;
+    font-size: 15px;
+}
+
+.copyright-area {
+    background: #202020;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo,
+    .footer-contact {
+        margin-bottom: 10px;
+    }
 }
