@@ -1,24 +1,24 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 .hero {
-  position: relative;
   height: 75vh;
-  overflow: hidden;
-  margin: 0;
   background-image: url("/static/images/Hero_image.png");
   background-size: cover;
-  background-position: center;
-  display: flex;
+  
+  /* background-position: center; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(83, 141, 7);
-  font-size: 1rem;
-  padding-top: 100px;
+  align-items: center; */
+  /* text-align: center; */
+  /* color: rgb(83, 141, 7); */
+  /* font-size: 1rem; */
+  /* padding-top: 100px; */
+  /* overflow: hidden; */
+  /* margin: 0; */
+  /* position: relative; */
 }
 
 .btn-custom {
@@ -50,9 +50,9 @@ body, html {
   margin-top: 0 !important;
 }  
 
-.pt-3 {
+/* .pt-3 {
   padding-top: 1rem !important;
-}
+} */
 
 @media (min-width: 992px) {
   .container, .container-lg, .container-md, .container-sm {

@@ -7,12 +7,7 @@
 
 {% block content %}
 <div class="container text-center mt-5 pt-3">
-    <h1>Välkommen till Matminuterna!</h1>
-    <p>
-        Här hittar du enkla och snabblagade recept som passar din tid! 
-        Använd tidsknapparna nedan för att välja recept baserat på hur mycket tid du har tillgänglig.
-        Oavsett om du har 15, 30 eller 60 minuter, har vi något som passar dig. Välj en knapp och börja laga mat snabbt och enkelt!
-    </p>
+    
     <form method="get" action="/time">
         <button type="submit" name="time" value="15" class="btn btn-custom">15 minuter</button>
         <button type="submit" name="time" value="30" class="btn btn-custom">30 minuter</button>
