@@ -7,7 +7,8 @@ body, html {
   height: 75vh;
   background-image: url("/static/images/Hero_image.png");
   background-size: cover;
-  
+  display:flex;
+  text-align:center;
   /* background-position: center; */
   /* display: flex;
   justify-content: center;
@@ -19,6 +20,28 @@ body, html {
   /* overflow: hidden; */
   /* margin: 0; */
   /* position: relative; */
+}
+
+.hero div {
+  color:white;
+  backdrop-filter: blur(50px);
+  width:70%;
+  border-radius:15px;
+  padding:3%;
+  margin: auto;
+  justify-content:center;
+}
+.hero div h1 {
+  font-size:60px;
+  font-weight:900;
+  font-family: 'Poetsen One', 'sans-serif';
+}
+.hero div p {
+  font-size:23px;
+  padding-left:5%;
+  padding-right:5%;
+  text-align:center;
+  font-family: 'Poetsen One', 'sans-serif';
 }
 
 .btn-custom {
