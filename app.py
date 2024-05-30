@@ -1,38 +1,15 @@
-from flask import Flask, render_template, request, g
+from flask import Flask, render_template, request
 import sqlite3
 import os
 
 app = Flask(__name__)
 
-def get_recipes_by_time(exact_time):
-    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), './recipes.db'))
-    conn = sqlite3.connect(db_path)
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM recipes WHERE cooking_time = ?", (exact_time,))
-
-    results = cursor.fetchall()
-    conn.close()
-    return results
-
-DATABASE = './recipes.db'
-
-def get_db():
-    db = getattr(g, '_database', None)
-    if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
-    return db
-
-@app.teardown_appcontext
-def close_connection(exception):
-    db = getattr(g, '_database', None)
-    if db is not None:
-        db.close()
+db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'recipes.db'))
 
 def get_recipes_by_time(time):
-    conn = get_db()
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute("SELECT name, cooking_time, image_path, instructions FROM recipes WHERE cooking_time = ?", (time,))
-
     recipes = cursor.fetchall()
     return recipes
 
