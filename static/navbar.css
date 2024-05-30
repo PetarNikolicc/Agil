@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -15,11 +15,11 @@
 
 .navbar .nav-links {
     display: flex;
-    gap: 2cm; /* Justera avståndet mellan länkarna */
+    gap: 2cm;
 }
 
 .navbar .nav-link:last-child {
-    margin-right: 2cm; /* Placera sista länken 2 cm från högerkanten */
+    margin-right: 2cm;
 }
 
 .menu-tab {
@@ -30,7 +30,7 @@
     top: 10px;
     right: 10px;
     z-index: 2;
-    font-weight: bold; /* Bold text */
+    font-weight: bold;
 }
 
 .menu-tab:hover {
@@ -40,4 +40,4 @@
 .logo {
     height: auto;
     max-height: 80%;
-}
+} */
