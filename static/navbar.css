@@ -1,0 +1,43 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 1cm;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 2cm; /* Justera avståndet mellan länkarna */
+}
+
+.navbar .nav-link:last-child {
+    margin-right: 2cm; /* Placera sista länken 2 cm från högerkanten */
+}
+
+.menu-tab {
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    font-weight: bold; /* Bold text */
+}
+
+.menu-tab:hover {
+    color: #111;
+}
+
+.logo {
+    height: auto;
+    max-height: 80%;
+}

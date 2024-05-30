@@ -44,43 +44,97 @@ body {
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  .hero {
-    height: 350px;
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 100px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
+
 .hero {
-  background-image: url("/static/images/Matminuterna.png");
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+  margin: 0;
+  background-image: url("/static/images/Hero_image.png");
   background-size: cover;
   background-position: center;
+  display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: rgb(83, 141, 7);
   font-size: 1rem;
+  padding-top: 100px;
 }
-  .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  .feature {
-    width: 30%;
-    background: grey;
-    padding: 20px;
-    cursor: pointer;
-  }
-  .details {
-    display: none;
-    text-align: center;
-    padding: 20px;
-  }
 
+.btn-custom {
+  background-color: white;
+  color: black;
+  border: none; /* Ingen kant */
+  padding: 15px 30px; /* Större knappar */
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Mer skugga vid hovring */
+}
+
+.container {
+  padding-top: 0px; /* justering för att kompensera för navbarens höjd */
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-5 {
+  margin-top: 0 !important;
+}  
+
+.pt-3 {
+  padding-top: 1rem !important;
+}
+
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm {
+      max-width: 960px;
+  }
+}
+
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;  /* Se till att popupen ligger över allt annat innehåll */
+}
+
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 24px;
+  color: #000;
+}
 
