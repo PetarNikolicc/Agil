@@ -4,7 +4,6 @@ import os
 
 app = Flask(__name__)
 
-
 def get_recipes_by_time(exact_time):
     db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
     conn = sqlite3.connect(db_path)
@@ -32,7 +31,6 @@ def get_recipes_by_time(time):
 
     recipes = cursor.fetchall()
     return recipes
-
 
 @app.route('/')
 def homepage():

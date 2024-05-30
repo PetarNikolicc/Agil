@@ -9,7 +9,6 @@
 {% block content %}
 <div class="container text-center">
     <a href="/" class="btn btn-custom">Tillbaka till startsidan</a>
-    <h2>Recept</h2>
     <div class="card-deck">
         {% for recipe in recipes %}
             <div class="card" style="width: 18rem;" onclick="openPopup('{{ recipe[0] }}', '{{ recipe[3] }}')">
