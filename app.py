@@ -13,6 +13,15 @@ def get_recipes_by_time(exact_time):
 
 DATABASE = 'recipes.db'
 
+def update_recipe_ingredients(recipe_updates):
+    db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    for name, ingredients in recipe_updates.items():
+        cursor.execute("UPDATE recipes SET ingredients = ? WHERE name = ?", (ingredients, name))
+    conn.commit()
+    conn.close()
+
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
