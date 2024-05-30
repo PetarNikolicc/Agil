@@ -48,12 +48,12 @@ def close_connection(exception):
 def get_recipes_by_time(time):
     conn = get_db()
     cursor = conn.cursor()
-    cursor.execute("SELECT name, cooking_time, image_path, instructions FROM recipes WHERE cooking_time = ?", (time,))
+    cursor.execute("SELECT name, cooking_time, image_path, instructions, FROM recipes WHERE cooking_time = ?", (time,))
 
     recipes = cursor.fetchall()
     return recipes
 
-@app.route('/')
+"""@app.route('/')
 def homepage():
     time = request.args.get('time')
     if time:
@@ -64,7 +64,7 @@ def homepage():
             recipes = []
     else:
         recipes = []
-    return render_template('index.html', recipes=recipes)
+    return render_template('index.html', recipes=recipes)"""
 
 @app.route('/', methods=['GET'])
 def index():
