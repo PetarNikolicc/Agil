@@ -3,7 +3,6 @@ import sqlite3
 
 app = Flask(__name__)
 
-
 def get_recipes_by_time(exact_time):
     db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
     conn = sqlite3.connect(db_path)
@@ -31,7 +30,6 @@ def get_recipes_by_time(time):
 
     recipes = cursor.fetchall()
     return recipes
-
 
 @app.route('/')
 def homepage():
@@ -61,9 +59,6 @@ def time():
         return render_template('time.html', recipes=recipes)
     except Exception as e:
         return str(e)
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
