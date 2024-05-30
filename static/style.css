@@ -93,10 +93,19 @@ body, html {
   background: white;
   padding: 20px;
   border-radius: 5px;
-  width: 50%;
+  width: 50%; /* Halvera bredden */
+  max-width: 600px; /* Max bredd */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   position: relative;
 }
+
+.popup img {
+  width: 100%; /* Se till att bilden inte överskrider popupens bredd */
+  max-width: 300px; /* Max bredd på bilden */
+  height: auto;
+  margin-bottom: 20px;
+}
+
 
 .close {
   cursor: pointer;
@@ -106,4 +115,3 @@ body, html {
   font-size: 24px;
   color: #000;
 }
-
