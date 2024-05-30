@@ -5,12 +5,25 @@ import os
 app = Flask(__name__)
 
 def get_recipes_by_time(exact_time):
-    db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
+    db_path = os.path.abspath(os.path.join(os.path.dirname(__file__), './recipes.db'))
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM recipes WHERE cooking_time = ?", (exact_time,))
 
-DATABASE = 'recipes.db'
+    results = cursor.fetchall()
+    conn.close()
+    return results
+
+DATABASE = './recipes.db'
+
+def update_recipe_ingredients(recipe_updates):
+    db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    for name, ingredients in recipe_updates.items():
+        cursor.execute("UPDATE recipes SET ingredients = ? WHERE name = ?", (ingredients, name))
+    conn.commit()
+    conn.close()
 
 def get_db():
     db = getattr(g, '_database', None)
@@ -18,6 +31,14 @@ def get_db():
         db = g._database = sqlite3.connect(DATABASE)
     return db
 
+def add_ingredients_column():
+    db_path = os.path.join(os.path.dirname(__file__), 'recipes.db')
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    cursor.execute("ALTER TABLE recipes ADD COLUMN ingredients TEXT;")
+    conn.commit()
+    conn.close()
+    
 @app.teardown_appcontext
 def close_connection(exception):
     db = getattr(g, '_database', None)
