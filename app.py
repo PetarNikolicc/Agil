@@ -15,19 +15,6 @@ def get_recipes_by_time(time):
 
 @app.route('/')
 def homepage():
-    time = request.args.get('time')
-    if time:
-        try:
-            time = int(time)
-            recipes = get_recipes_by_time(time)
-        except ValueError:
-            recipes = []
-    else:
-        recipes = []
-    return render_template('index.html', recipes=recipes)
-
-@app.route('/', methods=['GET'])
-def index():
     return render_template('index.html')
 
 @app.route('/time', methods=['GET'])
