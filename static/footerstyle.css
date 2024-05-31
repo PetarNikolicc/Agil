@@ -59,6 +59,7 @@
     background: #202020;
     padding: 10px 0;
     text-align: center;
+    justify-content: center;
 }
 
 .copyright-text p {
