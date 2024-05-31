@@ -11,7 +11,7 @@ function openPopup(title, image, ingredients, instructions) {
     });
 
     document.getElementById('popupInstructions').innerText = instructions.trim().replace(/\\n/g, '\n'); // trim för att ta bort extra mellanslag
-    document.getElementById('recipePopup').style.display = 'block';
+    document.getElementById('recipePopup').style.display = 'flex';
 }
 
 function closePopup() {
