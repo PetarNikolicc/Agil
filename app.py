@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-DATABASE = 'recipes.db'
+DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), 'recipes.db'))
 
 def get_db():
     db = getattr(g, '_database', None)
