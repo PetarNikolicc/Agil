@@ -1,8 +1,8 @@
 import sqlite3
 
-# Anslut till SQLite-databasen
-conn = sqlite3.connect('recipes.db')
-cursor = conn.cursor()
+def remove_text_from_instructions():
+    conn = sqlite3.connect('recipes.db')
+    cursor = conn.cursor()
 
 # Specifika värden att uppdatera
 recipe_name = "Rostad kyckling"
@@ -35,8 +35,8 @@ cursor.execute("""
     WHERE name = ?
 """, (new_instructions, new_ingredients, recipe_name))
 
-# Spara ändringarna och stäng anslutningen
-conn.commit()
-conn.close()
+    # Spara ändringarna och stäng anslutningen
+    conn.commit()
+    conn.close()
 
 print(f"Instruktioner och ingredienser har uppdaterats för {recipe_name}.")

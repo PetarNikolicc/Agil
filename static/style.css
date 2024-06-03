@@ -7,29 +7,31 @@ body, html {
   height: 75vh;
   background-image: url("/static/images/Hero_image.png");
   background-size: cover;
-  display:flex;
-  text-align:center;
+  display: flex;
+  text-align: center;
 }
 
 .hero div {
-  color:white;
-  backdrop-filter: blur(30px);
-  width:50%;
-  border-radius:15px;
-  padding:1%;
+  color: white;
+  backdrop-filter: blur(50px);
+  width: 70%;
+  border-radius: 15px;
+  padding: 3%;
   margin: auto;
-  justify-content:center;
+  justify-content: center;
 }
+
 .hero div h1 {
-  font-size:50px;
-  font-weight:900;
+  font-size: 60px;
+  font-weight: 900;
   font-family: 'Poetsen One', 'sans-serif';
 }
+
 .hero div p {
-  font-size:23px;
-  padding-left:5%;
-  padding-right:5%;
-  text-align:center;
+  font-size: 23px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
   font-family: 'Poetsen One', 'sans-serif';
 }
 
@@ -64,16 +66,11 @@ body, html {
   margin-top: 0 !important;
 }  
 
-/* .pt-3 {
-  padding-top: 1rem !important;
-} */
-
 @media (min-width: 992px) {
   .container, .container-lg, .container-md, .container-sm {
       max-width: 960px;
   }
 }
-
 
 .popup {
   position: fixed;
@@ -88,7 +85,6 @@ body, html {
   z-index: 1000;  /* Se till att popupen ligger över allt annat innehåll */
 }
 
-
 .popup-content {
   background: white;
   padding: 20px;
@@ -97,17 +93,14 @@ body, html {
   max-width: 600px; /* Max bredd */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   position: relative;
-  justify-content: center;
 }
 
-.popup img {
-  width: 100%; /* Se till att bilden inte överskrider popupens bredd */
-  max-width: 300px; /* Max bredd på bilden */
+.popup-content img {
+  max-width: 40%; /* Minskar bildens storlek till hälften */
   height: auto;
-  margin-bottom: 20px;
-  justify-content: center;
+  display: block;
+  margin: 0 auto; /* Centrerar bilden horisontellt */
 }
-
 
 .close {
   cursor: pointer;
