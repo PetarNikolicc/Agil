@@ -9,6 +9,8 @@ body, html {
   background-size: cover;
   display: flex;
   text-align: center;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
 }
 
 .hero div {
@@ -83,20 +85,23 @@ body, html {
   justify-content: center;
   align-items: center;
   z-index: 1000;  /* Se till att popupen ligger över allt annat innehåll */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .popup-content {
   background: white;
   padding: 20px;
   border-radius: 5px;
-  width: 50%; /* Halvera bredden */
+  width: 80%; /* Halvera bredden */
   max-width: 600px; /* Max bredd */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   position: relative;
+  max-height: 90vh; /* Ensure the popup content does not exceed the viewport height */
+  overflow-y: auto; /* Make the content scrollable */
 }
 
 .popup-content img {
-  max-width: 40%; /* Minskar bildens storlek till hälften */
+  max-width: 80%; /* Minskar bildens storlek till hälften */
   height: auto;
   display: block;
   margin: 0 auto; /* Centrerar bilden horisontellt */
@@ -109,4 +114,23 @@ body, html {
   right: 14px;
   font-size: 24px;
   color: #000;
+}
+
+@media (max-width: 767px) {
+  .hero div h1 {
+    font-size: 36px;
+  }
+
+  .hero div p {
+    font-size: 16px;
+  }
+
+  .btn-custom {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
 }

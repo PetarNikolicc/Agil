@@ -11,8 +11,8 @@
     <a href="/" class="btn btn-custom">Tillbaka till startsidan</a>
     <div class="row">
         {% for recipe in recipes %}
-            <div class="col-md-4">
-                <div class="card mb-4" style="width: 18rem;" onclick="openPopup('{{ recipe[0] }}', '{{ recipe[2] }}', `{{ recipe[3].replace('\n', '\\n') }}`, `{{ recipe[4].replace('\n', '\\n') }}`)">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card" onclick="openPopup('{{ recipe[0] }}', '{{ recipe[2] }}', `{{ recipe[3].replace('\n', '\\n') }}`, `{{ recipe[4].replace('\n', '\\n') }}`)">
                     <img src="{{ recipe[2] }}" class="card-img-top" alt="Bild på {{ recipe[0] }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ recipe[0] }}</h5>
