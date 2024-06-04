@@ -1,3 +1,46 @@
+.hero-section {
+  position: relative;
+  width: 900px;
+  height: 800px;
+  background-image: url('../static/Hero_image.png');
+  background-size: cover;
+  background-position: center;
+  color: #539456; 
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.hero-content {
+  padding: 20px; 
+  text-align: center;
+  background-color: bisque;
+  color: #539456;
+}
+
+.hero-content h1 {
+  font-size: 36px; 
+  margin-bottom: 20px; 
+}
+
+.hero-content p {
+  font-size: 18px; 
+  line-height: 1.5;
+} 
+
+body {
+  font-family: Arial, sans-serif; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -7,29 +50,31 @@ body, html {
   height: 75vh;
   background-image: url("/static/images/Hero_image.png");
   background-size: cover;
-  display:flex;
-  text-align:center;
+  display: flex;
+  text-align: center;
 }
 
 .hero div {
-  color:white;
+  color: white;
   backdrop-filter: blur(50px);
-  width:70%;
-  border-radius:15px;
-  padding:3%;
+  width: 70%;
+  border-radius: 15px;
+  padding: 3%;
   margin: auto;
-  justify-content:center;
+  justify-content: center;
 }
+
 .hero div h1 {
-  font-size:60px;
-  font-weight:900;
+  font-size: 60px;
+  font-weight: 900;
   font-family: 'Poetsen One', 'sans-serif';
 }
+
 .hero div p {
-  font-size:23px;
-  padding-left:5%;
-  padding-right:5%;
-  text-align:center;
+  font-size: 23px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
   font-family: 'Poetsen One', 'sans-serif';
 }
 
@@ -64,16 +109,11 @@ body, html {
   margin-top: 0 !important;
 }  
 
-/* .pt-3 {
-  padding-top: 1rem !important;
-} */
-
 @media (min-width: 992px) {
   .container, .container-lg, .container-md, .container-sm {
       max-width: 960px;
   }
 }
-
 
 .popup {
   position: fixed;
@@ -88,7 +128,6 @@ body, html {
   z-index: 1000;  /* Se till att popupen ligger över allt annat innehåll */
 }
 
-
 .popup-content {
   background: white;
   padding: 20px;
@@ -96,6 +135,13 @@ body, html {
   width: 50%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   position: relative;
+}
+
+.popup-content img {
+  max-width: 50%; /* Minskar bildens storlek till hälften */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centrerar bilden horisontellt */
 }
 
 .close {
@@ -106,4 +152,3 @@ body, html {
   font-size: 24px;
   color: #000;
 }
-
